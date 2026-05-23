@@ -1,15 +1,16 @@
-#ifndef PBM_IMAGE_HPP
-#define PBM_IMAGE_HPP
+#ifndef PGM_IMAGE_HPP
+#define PGM_IMAGE_HPP
 
 #include "Image.hpp"
 #include <vector>
 
-class PBMImage : public Image {
+class PGMImage : public Image {
     private:
-        vector<vector<bool>> pixels;
+        vector<vector<int>> pixels;
+        int maxValue;
 
     public:
-        PBMImage(const string& name);
+        PGMImage(const string& name);
 
         void load() override;
         void save() const override;
