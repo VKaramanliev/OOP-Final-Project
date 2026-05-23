@@ -1,0 +1,31 @@
+#ifndef PPM_IMAGE_HPP
+#define PPM_IMAGE_HPP
+
+#include "Image.hpp"
+#include <vector>
+
+struct RGB {
+    int r;
+    int g;
+    int b;
+};
+
+class PPMImage : public Image {
+    private:
+        vector<vector<RGB>> pixels;
+        int maxValue;
+
+    public:
+        PPMImage(const string& name);
+
+        void load() override;
+        void save() const override;
+        void saveas(const string& newName) const override;
+
+        void grayscale() override;
+        void monochrome() override;
+        void negative() override;
+        void rotate(const string& direction) override;
+};
+
+#endif
