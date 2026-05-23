@@ -6,7 +6,7 @@
 
 class PBMImage : public Image {
     private:
-        vector<vector<bool>> pixels;
+        vector<vector<int>> pixels;
 
     public:
         PBMImage(const string& name);
@@ -15,8 +15,6 @@ class PBMImage : public Image {
         void save() const override;
         void saveas(const string& newName) const override;
 
-        void grayscale() override;
-        void monochrome() override;
         void negative() override;
         void rotate(const string& direction) override;
 };

@@ -18,8 +18,8 @@ class Image {
         virtual void save() const = 0;
         virtual void saveas(const string& newName) const = 0;
 
-        virtual void grayscale() = 0;
-        virtual void monochrome() = 0;
+        virtual void grayscale() {};
+        virtual void monochrome() {};
         virtual void negative() = 0;
         virtual void rotate(const string& direction) = 0;
 

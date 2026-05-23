@@ -16,8 +16,6 @@ class PGMImage : public Image {
         void save() const override;
         void saveas(const string& newName) const override;
 
-        void grayscale() override;
-        void monochrome() override;
         void negative() override;
         void rotate(const string& direction) override;
 };
