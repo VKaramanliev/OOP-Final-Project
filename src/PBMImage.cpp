@@ -17,7 +17,7 @@ void PBMImage::load() {
     file >> format;
 
     if (format != "P1") {
-        cout << "Invalid file!" << endl;
+        cout << "Invalid file format!" << endl;
         file.close();
         return;
     }
