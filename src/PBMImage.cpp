@@ -123,3 +123,7 @@ void PBMImage::rotate(const string& direction) {
     width = height;
     height = width;
 }
+
+Image* PBMImage::clone() const {
+    return new PBMImage(*this);
+}

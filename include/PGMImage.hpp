@@ -18,6 +18,8 @@ class PGMImage : public Image {
 
         void negative() override;
         void rotate(const string& direction) override;
+
+        Image* clone() const override;
 };
 
 #endif

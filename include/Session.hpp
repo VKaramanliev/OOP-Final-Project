@@ -14,9 +14,16 @@ class Session {
         vector<Transformation> transformations;
 
         void applyTransformation(Image* image, const Transformation& transformation);
+        void copy(const Session& other);
 
     public:
         Session(int id);
+
+        Session(const Session& other);
+        Session& operator=(const Session& other);
+
+        Session(Session&& other) noexcept;
+        Session& operator=(Session&& other) noexcept;
 
         void addImage(Image* image);
         void grayscale();

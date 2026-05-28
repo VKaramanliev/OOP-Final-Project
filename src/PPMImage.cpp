@@ -155,3 +155,7 @@ void PPMImage::rotate(const string& direction) {
     width = height;
     height = width;
 }
+
+Image* PPMImage::clone() const {
+    return new PPMImage(*this);
+}

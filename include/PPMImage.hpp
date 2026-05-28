@@ -26,6 +26,8 @@ class PPMImage : public Image {
         void monochrome() override;
         void negative() override;
         void rotate(const string& direction) override;
+
+        Image* clone() const override;
 };
 
 #endif

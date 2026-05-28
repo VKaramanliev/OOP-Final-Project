@@ -28,6 +28,8 @@ class Image {
         int getHeight() const;
 
         virtual ~Image() {}
+
+        virtual Image* clone() const = 0;
 };
 
 #endif

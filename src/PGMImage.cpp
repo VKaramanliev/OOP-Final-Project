@@ -98,3 +98,7 @@ void PGMImage::rotate(const string& direction) {
     width = height;
     height = oldWidth;
 }
+
+Image* PGMImage::clone() const {
+    return new PGMImage(*this);
+}

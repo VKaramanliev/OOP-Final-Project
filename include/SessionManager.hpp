@@ -12,6 +12,9 @@ class SessionManager {
     public:
         SessionManager();
 
+        SessionManager(const SessionManager&) = delete;
+        SessionManager& operator=(const SessionManager&) = delete;
+
         void createSession(const vector<Image*>& images);
         void switchSession(int id);
         void closeSession();
